@@ -9,6 +9,7 @@ function App() {
       <div className="container">
         <Title/>
         <ContentDisplay/>
+        <ContentParameters/>
       </div>
     </div>
   );

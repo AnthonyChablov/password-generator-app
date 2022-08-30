@@ -1,6 +1,6 @@
 const Checkbox = () => {
     return (
-        <div>Checkbox</div>
+        <div className="">Checkbox</div>
     ) 
 }
 

@@ -1,6 +1,16 @@
 const Slider = () => {
   return (
-    <div>Slider</div>
+    <div className="slider-wrapper">
+        <input 
+          className="slider" 
+          id="myRange" 
+          type="range" 
+          min="1" 
+          max="100" 
+          defaultValue="50"
+        >  
+        </input>
+    </div>
   )
 }
 

@@ -1,8 +1,18 @@
-import React from 'react'
+import Slider from "../Slider/Slider";
 
 const ContentParameters = () => {
     return (
-        <div>ContentParameters</div>
+        <section className='content-parameters'>
+            <div className="content-parameters__content-header">
+                <div className="content-header__description">
+                    Character Length
+                </div>
+                <div className="content-header__output">
+                    10
+                </div>
+            </div>
+            <Slider/>
+        </section>
     )
 }
 

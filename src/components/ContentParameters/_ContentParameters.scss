@@ -1,0 +1,22 @@
+@import '../../scss/variables';
+
+.content-parameters{
+    background-color: $dark-grey;   
+    margin-top: 1em;
+    padding: 1em 1em;
+
+    .content-parameters__content-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content-header__description{
+            font-size: 1rem;
+            color: $silver;
+        }
+        .content-header__output{
+            font-size: 1.5rem;
+            color: $green;
+        }
+    }
+}
