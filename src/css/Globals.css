@@ -1,0 +1,67 @@
+/* fonts*/
+@font-face {
+  font-family: "Jet-Brains-Italics";
+  src: url("../../public/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Jet-Brains-Mono";
+  src: url("../../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+/* colors */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #0e0d12;
+  font-family: "Jet-Brains-Mono", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.app {
+  text-align: center;
+}
+
+/* fonts*/
+@font-face {
+  font-family: "Jet-Brains-Italics";
+  src: url("../../public/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Jet-Brains-Mono";
+  src: url("../../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+/* colors */
+.app__title {
+  padding-top: 3.8em;
+  color: #807c92;
+  font-size: 1em;
+}
+
+/* fonts*/
+@font-face {
+  font-family: "Jet-Brains-Italics";
+  src: url("../../public/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Jet-Brains-Mono";
+  src: url("../../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+/* colors */
+.content {
+  background-color: #24232b;
+}/*# sourceMappingURL=Globals.css.map */

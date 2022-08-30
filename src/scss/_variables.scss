@@ -1,0 +1,19 @@
+/* fonts*/
+@font-face {
+    font-family: 'Jet-Brains-Italics';
+    src: url("../../public/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Jet-Brains-Mono';
+    src: url("../../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+
+$font-jb-italics: 'Jet-Brains-Italics', sans-serif;
+$font-jb-variable :'Jet-Brains-Mono', sans-serif;
+
+/* colors */
+$green: #a3ffae; 
+$black: #0e0d12;
+$silver:#e7e6eb; 
+$grey: #807c92;
+$dark-grey: #24232b;

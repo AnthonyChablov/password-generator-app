@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    background-color: $black;
+    font-family: $font-jb-variable;
+}
+img{
+    max-width: 100%;
+}
+h1,h2,h3{
+    margin-top: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width:90%;
+    max-width: 1000px;
+}
+.app{
+    text-align: center;
+}
+
+
+
+
+
