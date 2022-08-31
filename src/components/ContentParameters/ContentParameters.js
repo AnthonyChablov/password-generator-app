@@ -1,4 +1,7 @@
 import Slider from "../Slider/Slider";
+import CheckboxParameters from "../CheckboxParameters/CheckboxParameters";
+import SubContentDisplay from '../SubContentDisplay/SubContentDisplay';
+import Button from "../Button/Button";
 
 const ContentParameters = () => {
     return (
@@ -12,6 +15,9 @@ const ContentParameters = () => {
                 </div>
             </div>
             <Slider/>
+            <CheckboxParameters/>
+            <SubContentDisplay/>
+            <Button/>
         </section>
     )
 }

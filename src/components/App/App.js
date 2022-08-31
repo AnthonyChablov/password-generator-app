@@ -10,6 +10,7 @@ function App() {
         <Title/>
         <ContentDisplay/>
         <ContentParameters/>
+        
       </div>
     </div>
   );

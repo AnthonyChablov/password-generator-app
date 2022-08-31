@@ -1,0 +1,95 @@
+@import '../../scss/variables';
+
+
+.sub-content-display{
+    margin-top: 1.5em;
+    font-family: $font-jb-bold ;
+    color: $silver;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0 1em;
+    background-color: $black;
+    
+    .sub-content-display__title{
+        color: $grey;
+        font-size: 1em;
+    }
+    .sub-content-display__info{
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        .info__status{
+            margin-right: 1em;
+        }
+
+        
+        .info__bar{
+            position: absolute;
+            bottom: 0;
+            min-height: 8px;
+            line-height: 8px;
+            z-index: 10;
+            -webkit-transition: width 0.3s ease-in-out;
+            -moz-transition: width 0.3s ease-in-out;
+            -o-transition: width 0.3s ease-in-out;
+            transition: width 0.3s ease-in-out;
+            @media screen and (max-width: 768px) {
+                bottom: 104px;
+            }
+            &.veryWeak {
+                background-color: #d63031;
+                width: 17.2%;
+            }
+            &.weak {
+                background-color: #d63031;
+                width: 34.4%;
+            }
+            &.medium {
+            background-color: #f39c12;
+                width: 51.6%;
+            }
+            
+            &.strong {
+                background-color: #2ecc71;
+                width: 68.8%;
+            }
+            &.veryStrong {
+                background-color: #2ecc71;
+                width: 86%;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+        .secure-bar-background {
+            position: absolute;
+            bottom: 0;
+            min-height: 8px;
+            line-height: 8px;
+            width: 86%;
+            z-index: 1;
+            @media screen and (max-width: 768px) {
+                bottom: 104px;
+                width: 100%;
+            }
+        
+            &.veryWeak,
+            &.weak {
+                background-color: #e99990;
+            }
+            
+            &.medium {
+                background-color: #f3e1c7;
+            }
+            
+            &.strong,
+            &.veryStrong {
+                background-color: #c2e4d0;
+            
+                }
+        }
+    }
+}

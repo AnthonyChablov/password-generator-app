@@ -6,7 +6,7 @@ const ContentDisplay = () => {
                 PTx1f5Dfafx
             </div>
             <div className="content-display__copy-icon">
-                <img   className="A123"
+                <img 
                     src={require("../../assets/icon-copy.svg").default} 
                     alt="img"
                 />
