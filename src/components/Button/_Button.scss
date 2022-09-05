@@ -9,9 +9,20 @@
     align-content: center;
     justify-content: center;
     padding: 1em;
-    
+    border: 0.11em solid $dark-grey;
     .button__text{
         margin-right: 1em;
     }
     
+}
+.button:hover{
+    cursor: pointer;
+    background-color: $dark-grey;
+    border: 0.11em solid $green;
+    .button__text{
+        color: $green;
+    }
+    .button__img img{
+        filter: brightness(0) saturate(100%) invert(83%) sepia(46%) saturate(327%) hue-rotate(67deg) brightness(101%) contrast(103%);
+    }
 }

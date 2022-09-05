@@ -93,6 +93,11 @@ h1, h2, h3 {
   font-size: 1.5rem;
   color: #a3ffae;
 }
+.content-parameters .content-parameters__slider {
+  width: 100%;
+  height: 0.4em;
+  color: #a3ffae;
+}
 
 /* fonts*/
 @font-face {
@@ -142,88 +147,23 @@ h1, h2, h3 {
   src: url("../../public/fonts/static/JetBrainsMono-Bold.ttf") format("truetype");
 }
 /* colors */
-.slider-wrapper {
-  padding-top: 0.8em;
-  padding-bottom: 1.5em;
-  width: 100%;
-}
-.slider-wrapper .slider {
-  -webkit-appearance: none;
-  border: none;
-  -moz-appearance: none;
-       appearance: none;
-  width: 100%;
-  height: 0.7em;
-  background: #a3ffae;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-.slider-wrapper .slider:hover {
-  outline: none;
-  opacity: 1;
-}
-.slider-wrapper .slider:focus {
-  border: none;
-  outline: none;
-}
-.slider-wrapper .slider::-webkit-slider-thumb {
-  border: none;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 2.2em;
-  height: 2.2em;
-  border-radius: 100px;
-  background: #e7e6eb;
-  cursor: pointer;
-  outline: none;
-}
-.slider-wrapper .slider::-moz-range-thumb {
-  border: none;
-  outline: none;
-  width: 2.2em;
-  height: 2.2em;
-  border-radius: 100px;
-  background: #e7e6eb;
-  cursor: pointer;
-}
-
-/* fonts*/
-@font-face {
-  font-family: "Jet-Brains-Italics";
-  src: url("../../public/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Jet-Brains-Mono";
-  src: url("../../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Jet-Brains-Mono-Bold";
-  src: url("../../public/fonts/static/JetBrainsMono-Bold.ttf") format("truetype");
-}
-/* colors */
 .checkbox .checkbox__label {
-  padding: 0.6em 0;
+  padding: 0em 0;
   display: flex;
   align-items: center;
-}
-.checkbox .checkbox__label .checkbox__input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-  transform: translateY(-0.075em);
-  margin-right: 1em;
-}
-.checkbox .checkbox__label .checkbox__text {
+  justify-content: flex-start;
   color: #e7e6eb;
+}
+.checkbox .checkbox__label .checkbox__content {
+  color: #e7e6eb;
+  margin-right: 0.6em;
+}
+.checkbox .checkbox__label .checkbox__content.Mui-checked {
+  color: #a3ffae;
+}
+.checkbox .checkbox__label .checkbox__content.MuiButtonBase-root:hover {
+  color: #a3ffae;
+  box-shadow: none;
 }
 
 /* fonts*/
@@ -269,6 +209,9 @@ h1, h2, h3 {
   min-height: 8px;
   line-height: 8px;
   z-index: 10;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
 @media screen and (max-width: 768px) {
@@ -348,7 +291,20 @@ h1, h2, h3 {
   align-content: center;
   justify-content: center;
   padding: 1em;
+  border: 0.11em solid #24232b;
 }
 .button .button__text {
   margin-right: 1em;
-}/*# sourceMappingURL=Globals.css.map */
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #24232b;
+  border: 0.11em solid #a3ffae;
+}
+.button:hover .button__text {
+  color: #a3ffae;
+}
+.button:hover .button__img img {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(46%) saturate(327%) hue-rotate(67deg) brightness(101%) contrast(103%);
+}

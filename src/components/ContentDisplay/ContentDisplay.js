@@ -1,9 +1,10 @@
-
+import {useContext} from 'react';
 const ContentDisplay = () => {
+    const {username} = useContext(AppContext);
     return (
         <section className="content-display">
             <div className="content-display__generated-text">
-                PTx1f5Dfafx
+                {username}
             </div>
             <div className="content-display__copy-icon">
                 <img 

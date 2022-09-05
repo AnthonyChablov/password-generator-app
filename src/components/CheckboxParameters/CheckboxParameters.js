@@ -1,13 +1,12 @@
-import Checkbox from "../Checkbox/Checkbox";
+import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 const CheckboxParameters = () => {
     return (
         <>
-            <Checkbox />
-            <Checkbox />
-            <Checkbox />
-            <Checkbox />
+            <CustomCheckbox description={"Include Uppercase Letters"}/>
+            <CustomCheckbox description={"Include Uppercase Letters"}/>
+            <CustomCheckbox description={"Include Uppercase Letters"}/>
+            <CustomCheckbox description={"Include Uppercase Letters"}/>
         </>
     )
 }
-
 export default CheckboxParameters

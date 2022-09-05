@@ -8,7 +8,8 @@ const Button = () => {
             <div className="button__img">
                 <img 
                     src={require("../../assets/icon-arrow-right.svg").default} 
-                    alt="img"></img>
+                    alt="img">
+                </img>
             </div>
             
         </div>
