@@ -21,29 +21,6 @@ const ContentParameters = () => {
                 min={0}
                 max={20}
                 valueLabelDisplay='off'
-                sx={{
-                    width: '100%',
-                    height:'0.4em',
-                    color: '#a3ffae',
-                    '& .MuiSlider-thumb': {
-                        color: '#e7e6eb',
-                        outlineStyle:'solid',
-                        outlineWidth:'.13em',
-                        boxShadow:"none",
-                        outlineColor:'#e7e6eb',  
-                    },
-                    '& .MuiSlider-thumb:hover': {
-                        color: 'black',
-                        outlineColor: '#a3ffae',
-                        boxShadow: 'none'
-                    },
-                    '& .MuiSlider-rail': {
-                        color: 'black',
-                        backgroundColor:'black',
-                        height:'0.6em',    
-                        boxShadow: 'none'                  
-                    }
-                }}
             />
             <CheckboxParameters/>
             <SubContentDisplay/>

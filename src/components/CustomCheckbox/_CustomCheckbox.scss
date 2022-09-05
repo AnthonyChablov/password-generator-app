@@ -1,0 +1,26 @@
+@import '../../scss/variables';
+
+.checkbox{
+    
+    .checkbox__label{
+        padding:0em 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color:$silver;
+        
+        .checkbox__content{
+            color: $silver;
+            margin-right: 0.6em;
+            
+            &.Mui-checked{
+                color: $green;
+            }
+            &.MuiButtonBase-root:hover{
+                color: $green;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
