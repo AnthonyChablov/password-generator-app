@@ -2,16 +2,20 @@ import CheckboxParameters from "../CheckboxParameters/CheckboxParameters";
 import SubContentDisplay from '../SubContentDisplay/SubContentDisplay';
 import Button from "../Button/Button";
 import Slider from '@mui/material/Slider';
+import { useContext } from "react"
+import { AppContext } from "../../context/GlobalContext"
 
-const ContentParameters = () => {
+const ContentParameters = ({title}) => {
+    const {passwordLength, setPasswordLength} = useContext(AppContext);
+    
     return (
         <section className='content-parameters'>
             <div className="content-parameters__content-header">
                 <div className="content-header__description">
-                    Character Length
+                    {title}
                 </div>
                 <div className="content-header__output">
-                    10
+                    {passwordLength}
                 </div>
             </div>
             <Slider
@@ -21,6 +25,7 @@ const ContentParameters = () => {
                 min={0}
                 max={20}
                 valueLabelDisplay='off'
+                onChange={(e, val)=>setPasswordLength(val)}
             />
             <CheckboxParameters/>
             <SubContentDisplay/>

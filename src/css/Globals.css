@@ -148,8 +148,22 @@ h1, h2, h3 {
 .content-display__copy-icon:hover {
   cursor: pointer;
 }
-.content-display__copy-icon:hover img {
+.content-display__copy-icon:hover .copy-icon {
   filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(76%) hue-rotate(212deg) brightness(100%) contrast(91%);
+}
+
+.toast-progress {
+  background: #a3ffae;
+}
+
+.toast-style {
+  font-family: "Jet-Brains-Mono", sans-serif;
+  color: #e7e6eb;
+  background: #24232b;
+}
+
+.toast-icon {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(12%) saturate(1259%) hue-rotate(69deg) brightness(105%) contrast(101%);
 }
 
 /* fonts*/
