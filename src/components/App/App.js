@@ -5,7 +5,6 @@ import ContentParameters from '../ContentParameters/ContentParameters';
 import AppContextProvider from "../../context/GlobalContext";
 
 function App() {
-  
   return (  
     <AppContextProvider>
       <div className="app">
@@ -16,7 +15,6 @@ function App() {
         </div>
       </div>
     </AppContextProvider>
-
   );
 }
 

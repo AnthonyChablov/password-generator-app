@@ -1,21 +1,20 @@
+import { useContext } from "react";
+import { AppContext } from "../../context/GlobalContext";
 const Strength = () => {
+    const { passwordStrengthName } = useContext(AppContext);
     return (
         <div className="sub-content-display">
             <p className="sub-content-display__title">
-                {/* insert state */}
                 Strength
             </p>
             <div className="sub-content-display__info">
-                {/* insert state */}
                 <p className="info__status">
-                    Medium
+                    {passwordStrengthName}
                 </p>
                 <div className="info__bar">
-                    
+
                 </div>
             </div>
-
-
         </div>
     )
 }
