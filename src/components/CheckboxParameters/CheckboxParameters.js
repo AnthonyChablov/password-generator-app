@@ -18,6 +18,7 @@ const CheckboxParameters = () => {
         setIncludeNumbers((event.target.checked) | 0);
     });
     const handleChangeSymbols = ((event)=>{
+        console.log(+event.target.checked)
         setIncludeSymbols((event.target.checked) | 0);
     });
     return (

@@ -28,6 +28,52 @@ const AppContextProvider = ({children}) => {
             strength <= passwordStrength.max
         )[0].name;
     }
+
+    /* click handeller to generate pw based upon params */
+    const createPassword = () =>{
+        let length = passwordLength
+        let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let lower = upper.toLowerCase();
+        let number = '0123456789';
+        let symbols = '~!@-#$%^*()-=`><?/:;[]';
+        let wishlist = {
+            ULNS:`${symbols}${number}${upper}${lower}`,
+            ULN:`${number}${lower}${number}`,
+            UL:`${upper}${lower}`,
+            ULS:`${upper}${lower}${symbols}`,
+            U:`${upper}`,
+            US:`${upper}${symbols}`,
+            UNS:`${upper}${number}${symbols}`,
+            L:`${lower}`,
+            LN:`${lower}${number}`,
+            LS:`${lower}${symbols}`,
+            LNS:`${lower}${number}${symbols}`
+        };
+        let output = '';
+        // first condition --- uppercase, lowercase, numbers, symbol
+        if(includeUpper === 1 && includeLower === 1 && includeNumbers === 1 && includeSymbols===1){
+            output=Array.from(crypto.getRandomValues(new Uint32Array(length))).map((x) => wishlist.ULNS[x % wishlist.ULNS.length]).join('');
+        }
+        // second condition --- uppercase, lowercase, numbers
+        else if(includeUpper === 1 && includeLower === 1 && includeNumbers === 1){
+            output = Array.from(crypto.getRandomValues(new Uint32Array(length))).map((x) => wishlist.ULN[x % wishlist.ULN.length]).join('');
+        }
+        // third condition --- uppercase, lowercase
+        else if(includeUpper === 1 && includeLower === 1){
+            output=Array.from(crypto.getRandomValues(new Uint32Array(length))).map((x) => wishlist.UL[x % wishlist.UL.length]).join('');
+        }
+        // fourth condition --- uppercase
+        else if(includeUpper === 1 && includeLower === 1){
+            output=Array.from(crypto.getRandomValues(new Uint32Array(length))).map((x) => wishlist.U[x % wishlist.U.length]).join('');
+        }
+        // fifth condition --- lower case number
+        else if(includeLower === 1 && includeNumbers ===1){
+            output=Array.from(crypto.getRandomValues(new Uint32Array(length))).map((x) => wishlist.U[x % wishlist.U.length]).join('');
+        }
+        console.log(output)
+        setPassword(output);
+    }
+
     const value = {
         loading, 
         setLoading, 
@@ -46,7 +92,9 @@ const AppContextProvider = ({children}) => {
         includeSymbols,
         setIncludeSymbols,
         passwordStrengthName,
-        setPasswordStrengthName
+        setPasswordStrengthName,
+
+        createPassword
     }
     return (
         <AppContext.Provider value={value}>

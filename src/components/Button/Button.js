@@ -1,6 +1,6 @@
-const Button = () => {
+const Button = ({generatePassword}) => {
     return (
-        <div className="button">
+        <div onClick={generatePassword} className="button">
             {/* Dynamically insert state */}
             <div className="button__text">
                 Generate

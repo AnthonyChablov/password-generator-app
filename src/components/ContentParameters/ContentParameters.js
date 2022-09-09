@@ -4,10 +4,20 @@ import Button from "../Button/Button";
 import Slider from '@mui/material/Slider';
 import { useContext } from "react"
 import { AppContext } from "../../context/GlobalContext"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContentParameters = ({title}) => {
-    const {passwordLength, setPasswordLength} = useContext(AppContext);
-    
+    const {passwordLength, setPasswordLength, createPassword} = useContext(AppContext);
+    const notifyGeneratePassWord = () => toast.success("Password Generated",{
+        closeOnClick: true,
+        autoClose: 2500,
+        theme:'dark',
+    });
+    const generatePassword = ()=>{
+        createPassword();
+        notifyGeneratePassWord();
+    }
     return (
         <section className='content-parameters'>
             <div className="content-parameters__content-header">
@@ -29,9 +39,22 @@ const ContentParameters = ({title}) => {
             />
             <CheckboxParameters/>
             <SubContentDisplay/>
-            <Button/>
+            <Button generatePassword={generatePassword}/> {/* onclick function passed in as prop */}
+            <ToastContainer 
+                    newestOnTop 
+                    progressClassName="toast-progress"
+                    toastClassName='toast-style'
+                    bodyClassName="toast-body"
+                    colorSuccess= "#a3ffae"
+                    icon = {
+                        <img 
+                            className="toast-icon"
+                            src={require("../../assets/icon-copy.svg").default} 
+                            alt="copy icon image"
+                        />
+                    }
+                />
         </section>
     )
 }
-
 export default ContentParameters
