@@ -8,16 +8,20 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ContentParameters = ({title}) => {
-    const {passwordLength, setPasswordLength, createPassword} = useContext(AppContext);
-    const notifyGeneratePassWord = () => toast.success("Password Generated",{
+    const {passwordLength, setPasswordLength, randomlyGenerate} = useContext(AppContext);
+    const notifyGeneratePassword = () => toast.success("Password Generated",{
         closeOnClick: true,
-        autoClose: 2500,
+        autoClose: 1750,
         theme:'dark',
     });
     const generatePassword = ()=>{
-        createPassword();
-        notifyGeneratePassWord();
+        randomlyGenerate()
+        // if toast is already active and it has been clicked while active iw ant to dismss and bring ina new one
+        toast.dismiss();
+        notifyGeneratePassword();
+        toast.clearWaitingQueue();
     }
+
     return (
         <section className='content-parameters'>
             <div className="content-parameters__content-header">
@@ -41,6 +45,7 @@ const ContentParameters = ({title}) => {
             <SubContentDisplay/>
             <Button generatePassword={generatePassword}/> {/* onclick function passed in as prop */}
             <ToastContainer 
+                    limit={1}
                     newestOnTop 
                     progressClassName="toast-progress"
                     toastClassName='toast-style'

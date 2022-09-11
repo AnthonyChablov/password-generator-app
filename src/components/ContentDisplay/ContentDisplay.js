@@ -7,17 +7,20 @@ const ContentDisplay = () => {
     const copyClipboard = () => {navigator.clipboard.writeText(password)}
     const notify = () => toast.success("Copied to Clipboard",{
         closeOnClick: true,
-        autoClose: 2500,
+        autoClose: 1750,
         theme:'dark',
     });
     const clickHandeler =()=>{
         copyClipboard();
+        // if toast is already active and it has been clicked while active iw ant to dismss and bring ina new one
+        toast.dismiss();
         notify();
+        toast.clearWaitingQueue();
     }
     return (
         <section className="content-display">
             <div className="content-display__generated-text">
-                {password}
+                <span>{password}</span>
             </div>
             <div className="content-display__copy-icon" 
                 onClick={clickHandeler}>

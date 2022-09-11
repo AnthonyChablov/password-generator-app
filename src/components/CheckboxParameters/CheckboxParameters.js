@@ -9,17 +9,17 @@ const CheckboxParameters = () => {
         setIncludeSymbols
     } = useContext(AppContext);
     const handleChangeUpper = ((event)=>{
-        setIncludeUpper((event.target.checked) | 0);
+        setIncludeUpper((event.target.checked));
     });
     const handleChangeLower = ((event)=>{
-        setIncludeLower((event.target.checked) | 0);
+        setIncludeLower((event.target.checked));
     });
     const handleChangeNumbers = ((event)=>{
-        setIncludeNumbers((event.target.checked) | 0);
+        setIncludeNumbers((event.target.checked));
     });
     const handleChangeSymbols = ((event)=>{
-        console.log(+event.target.checked)
-        setIncludeSymbols((event.target.checked) | 0);
+        console.log(event.target.checked)
+        setIncludeSymbols((event.target.checked));
     });
     return (
         <>
