@@ -16,10 +16,14 @@ $font-jb-italics: 'Jet-Brains-Italics', sans-serif;
 $font-jb-variable :'Jet-Brains-Mono', sans-serif;
 $font-jb-bold : 'Jet-Brains-Mono-Bold', sans-serif;
 
-/* colors */
+/* colours */
 $green: #a3ffae; 
 $black: #0e0d12;
 $silver:#e7e6eb; 
 $grey: #807c92;
 $dark-grey: #24232b;
-
+/* strength bar colours */
+$too-weak:#f64a4a;
+$weak: #fb7c58;
+$medium: #f8cd65;
+$strong: #a3ffae;

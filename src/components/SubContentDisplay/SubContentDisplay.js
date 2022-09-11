@@ -11,8 +11,11 @@ const Strength = () => {
                 <p className="info__status">
                     {passwordStrengthName}
                 </p>
-                <div className="info__bar">
-
+                <div className="info__strength-bar">
+                    <div className={`bar ${passwordStrengthName === 'STRONG' && 'strong'} ${passwordStrengthName === 'MEDIUM' && 'medium'} ${passwordStrengthName === 'WEAK' && 'weak'} ${passwordStrengthName === 'TOO WEAK!' && 'too-weak'}`}></div>
+                    <div className={`bar ${passwordStrengthName === 'STRONG' && 'strong'} ${passwordStrengthName === 'MEDIUM' && 'medium'} ${passwordStrengthName === 'WEAK' && 'weak'}`}></div>
+                    <div className={`bar ${passwordStrengthName === 'STRONG' && 'strong'} ${passwordStrengthName === 'MEDIUM' && 'medium'}`}></div>
+                    <div className={`bar ${passwordStrengthName === 'STRONG' && 'strong'} `}></div>
                 </div>
             </div>
         </div>

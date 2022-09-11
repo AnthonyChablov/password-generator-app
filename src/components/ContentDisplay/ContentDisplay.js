@@ -20,7 +20,7 @@ const ContentDisplay = () => {
     return (
         <section className="content-display">
             <div className="content-display__generated-text">
-                <span>{password}</span>
+                {password}
             </div>
             <div className="content-display__copy-icon" 
                 onClick={clickHandeler}>
